@@ -20,14 +20,14 @@ bot = Bot(token=TELEGRAM_BOT_TOKEN)
 dp = Dispatcher()
 
 WELCOME = (
-    "👋 Hello! I'm the **NEXUS Chronicles Knowledge Assistant**.\n\n"
-    "Ask me anything about the NEXUS universe — characters, events, technology, "
-    "organizations, and more.\n\n"
-    "Examples:\n"
-    "• Who is Steel Titan?\n"
-    "• What happened during the Nexus War?\n"
-    "• How does the Pulse Core work?\n"
-    "• What are the six Nexus Cores?"
+    "👋 Привет! Я **ассистент базы знаний NEXUS Chronicles**.\n\n"
+    "Задай мне любой вопрос о вселенной NEXUS — персонажи, события, технологии, "
+    "организации и многое другое.\n\n"
+    "Примеры вопросов:\n"
+    "• Кто такой Steel Titan?\n"
+    "• Что произошло во время Nexus War?\n"
+    "• Как работает Pulse Core?\n"
+    "• Что такое шесть Nexus Cores?"
 )
 
 
@@ -49,7 +49,7 @@ async def handle_question(message: Message) -> None:
         result = answer(question)
     except Exception as exc:
         log.error("RAG pipeline error: %s", exc)
-        await message.answer("⚠️ An internal error occurred. Please try again.")
+        await message.answer("⚠️ Произошла внутренняя ошибка. Попробуй ещё раз.")
         return
 
     ans = result["answer"]
@@ -59,13 +59,14 @@ async def handle_question(message: Message) -> None:
     success = (
         chunks > 0
         and len(ans.strip()) >= MIN_ANSWER_LENGTH
+        and "не нашёл информации" not in ans.lower()
         and "don't have information" not in ans.lower()
     )
 
     log_request(question, ans, sources, chunks, success)
 
     if sources and success:
-        source_line = "\n\n📄 *Sources:* " + ", ".join(f"`{s}`" for s in sources)
+        source_line = "\n\n📄 *Источники:* " + ", ".join(f"`{s}`" for s in sources)
     else:
         source_line = ""
 

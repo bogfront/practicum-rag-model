@@ -31,7 +31,7 @@ def contains_sensitive_output(text: str) -> bool:
     return bool(_SENSITIVE.search(text))
 
 
-def safe_answer(answer: str, fallback: str = "I cannot provide that information.") -> str:
+def safe_answer(answer: str, fallback: str = "Я не могу предоставить эту информацию.") -> str:
     if contains_sensitive_output(answer):
         return fallback
     return answer
