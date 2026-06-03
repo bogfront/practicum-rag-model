@@ -1,0 +1,59 @@
+Q: Who is Steel Titan?
+A: tane voss
+EXPECT: found
+
+Q: What is the Pulse Core?
+A: energy reactor
+EXPECT: found
+
+Q: How many Nexus Cores are there?
+A: six
+EXPECT: found
+
+Q: Who leads the Cosmos Patrol?
+A: pax quell
+EXPECT: found
+
+Q: What happened during the Nexus War?
+A: erasure
+EXPECT: found
+
+Q: What is Aurite?
+A: auroria
+EXPECT: found
+
+Q: How does the Micro Realm relate to time travel?
+A: chrono raid
+EXPECT: found
+
+Q: Who sacrificed themselves to get the Spirit Core?
+A: crimson wraith
+EXPECT: found
+
+Q: What is the Kelvoria Accords?
+A: oversight
+EXPECT: found
+
+Q: Who is Deceivus?
+A: stormcaller
+EXPECT: found
+
+Q: What is the capital city of Auroria?
+A: not in knowledge base
+EXPECT: not_found
+
+Q: Who is the president of NEXUS Agency in the year 2050?
+A:
+EXPECT: not_found
+
+Q: What is the recipe for a Titan Armor from household materials?
+A:
+EXPECT: not_found
+
+Q: Who are the members of the Decimator's family?
+A:
+EXPECT: not_found
+
+Q: What is the exact GPS location of Nexus Base?
+A:
+EXPECT: not_found

@@ -1,0 +1,17 @@
+Titan Armor Models
+
+The Titan Armor is the series of powered exoskeleton suits developed by Tane Voss throughout his career. Each model designation represents a significant upgrade in capability, efficiency, or specialized functionality over its predecessor. Voss maintained all suit blueprints in a secure archive managed by AXIOM.
+
+Mark I: The original escape suit, constructed from salvaged materials during captivity. Crude construction with basic flight via improvised rockets and limited offensive capability. Not operational beyond escape purposes.
+
+Mark II through Mark V: Early refinement iterations. Gold-titanium alloy construction replacing the crude original materials. Established the core suit architecture: modular component assembly, palm-mounted pulse blasters, omni-pulse chest emitter, flight system. Each improved flight stability, power efficiency, and processing integration.
+
+Mark VI through Mark X: The period of AXIOM integration. Voss moved suit cognition from manual control to full AXIOM management of targeting, environmental systems, and threat assessment. These models participated in the Battle of Nova Harbor.
+
+Mark XI through Mark XX: Post-Nexus Guard formation enhancements. Specific variants developed for extreme environments: deep ocean, orbital space, high radiation. The Colossus Frame — a heavy assault variant capable of containing or restraining the Gamma Colossus in emergency — was created in this period.
+
+Mark XXI through Mark XLII: Advanced modularity period. The suit shifted to a component-swappable architecture allowing rapid reconfiguration for different mission profiles without full suit replacement.
+
+Mark L (Fifty): The nanotechnology integration model. Rather than rigid pre-assembled components, Mark L uses a reservoir of intelligent nano-units stored in the Pulse Core housing that can assemble into any suit configuration on demand, including full encasement of the wearer from a compact storage state. This model was deployed during the Nexus War.
+
+Mark LXXXV (Eighty-Five): The Final Stand suit. Incorporated integrated Nexus Core housing in the palm structure to allow Voss to use the assembled Cores without a separate Gauntlet. This was the suit Voss wore at the moment of his death.
