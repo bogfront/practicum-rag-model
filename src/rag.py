@@ -1,4 +1,6 @@
 """RAG pipeline: retrieve chunks → build prompt → call YandexGPT."""
+from __future__ import annotations
+
 import requests
 import logging
 
