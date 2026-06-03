@@ -5,7 +5,10 @@ from pathlib import Path
 
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_community.vectorstores import FAISS
-from langchain_community.embeddings import HuggingFaceEmbeddings
+try:
+    from langchain_huggingface import HuggingFaceEmbeddings
+except ImportError:
+    from langchain_community.embeddings import HuggingFaceEmbeddings  # type: ignore[no-redef]
 
 from src.config import (
     KNOWLEDGE_BASE_DIR,
