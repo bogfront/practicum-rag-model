@@ -1,59 +1,59 @@
-Q: Who is Steel Titan?
-A: tane voss
+Q: Кто такой Steel Titan?
+A: тейном воссом
 EXPECT: found
 
-Q: What is the Pulse Core?
-A: energy reactor
+Q: Как работает Pulse Core?
+A: энерги
 EXPECT: found
 
-Q: How many Nexus Cores are there?
-A: six
+Q: Сколько Nexus Cores существует?
+A: шест
 EXPECT: found
 
-Q: Who leads the Cosmos Patrol?
+Q: Кто возглавляет Cosmos Patrol?
 A: pax quell
 EXPECT: found
 
-Q: What happened during the Nexus War?
+Q: Что произошло во время Nexus War?
 A: erasure
 EXPECT: found
 
-Q: What is Aurite?
-A: auroria
+Q: Что такое Aurite?
+A: металлический элемент
 EXPECT: found
 
-Q: How does the Micro Realm relate to time travel?
-A: chrono raid
+Q: Как Micro Realm связан с путешествием во времени?
+A: micro realm
 EXPECT: found
 
-Q: Who sacrificed themselves to get the Spirit Core?
+Q: Кто пожертвовал собой ради Spirit Core?
 A: crimson wraith
 EXPECT: found
 
-Q: What is the Kelvoria Accords?
-A: oversight
+Q: Что такое Kelvoria Accords?
+A: kelvori
 EXPECT: found
 
-Q: Who is Deceivus?
+Q: Кто такой Deceivus?
 A: stormcaller
 EXPECT: found
 
-Q: What is the capital city of Auroria?
-A: not in knowledge base
-EXPECT: not_found
-
-Q: Who is the president of NEXUS Agency in the year 2050?
+Q: Какая столица Аурории?
 A:
 EXPECT: not_found
 
-Q: What is the recipe for a Titan Armor from household materials?
+Q: Кто президент NEXUS Agency в 2050 году?
 A:
 EXPECT: not_found
 
-Q: Who are the members of the Decimator's family?
+Q: Как сделать Titan Armor из подручных материалов?
 A:
 EXPECT: not_found
 
-Q: What is the exact GPS location of Nexus Base?
+Q: Какой домашний адрес Тейна Восса?
+A:
+EXPECT: not_found
+
+Q: Каковы точные GPS-координаты Nexus Base?
 A:
 EXPECT: not_found

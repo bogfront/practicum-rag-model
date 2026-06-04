@@ -4,6 +4,6 @@ __pycache__/
 *.pyo
 .env
 data/
-logs/
+logs/cron.log
 *.egg-info/
 .DS_Store

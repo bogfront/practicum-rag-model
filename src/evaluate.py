@@ -1,4 +1,6 @@
 """Task 7: Automated golden-set evaluation of the RAG pipeline."""
+from __future__ import annotations
+
 import json
 import time
 from pathlib import Path
@@ -55,12 +57,17 @@ def evaluate(questions: list[dict] | None = None) -> dict:
 
         ans_lower = result["answer"].lower()
         kw_present = expected_kw in ans_lower if expected_kw else True
-        no_info = "don't have information" in ans_lower
+        no_info = (
+            "don't have information" in ans_lower
+            or "нет информации" in ans_lower
+            or "не могу предоставить" in ans_lower
+            or result["chunks_found"] == 0
+        )
 
         if expect_type == "found":
             ok = kw_present and not no_info and result["chunks_found"] > 0
         else:
-            ok = no_info or result["chunks_found"] == 0
+            ok = no_info
 
         if ok:
             passed += 1
