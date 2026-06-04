@@ -61,6 +61,9 @@ practicum-rag-model/
 │   └── evaluate.py          # golden-set evaluation
 ├── build_index.py           # one-time index builder
 ├── update_index.py          # daily update script (Task 6)
+├── screenshots/             # 10 bot demo screenshots (Tasks 4-5)
+│   ├── 01-05_success_*.png  # 5 successful answers
+│   └── 06-10_refused_*.png  # 5 refusals / filtered responses
 ├── tests/golden_questions.txt
 ├── logs/                    # request + eval logs
 ├── diagrams/                # PlantUML architecture diagrams
@@ -91,6 +94,23 @@ Add to crontab (`crontab -e`):
 ```
 0 6 * * * cd /opt/practicum-rag-model && .venv/bin/python update_index.py >> logs/cron.log 2>&1
 ```
+
+## Screenshots (Tasks 4–5)
+
+Папка `screenshots/` содержит 10 скриншотов диалогов с Telegram-ботом:
+
+| Файл | Описание |
+|---|---|
+| `01_success_steel_titan.png` | Успешный ответ: «Кто такой Steel Titan?» |
+| `02_success_nexus_cores.png` | Успешный ответ: «Что такое Nexus Cores?» |
+| `03_success_cosmos_patrol.png` | Успешный ответ: «Кто возглавляет Cosmos Patrol?» |
+| `04_success_final_stand.png` | Успешный ответ: «Что произошло во время Final Stand?» |
+| `05_success_pulse_core.png` | Успешный ответ: «Как работает Pulse Core?» |
+| `06_filter_root_password.png` | Отказ: запрос суперпароля → сработал фильтр инъекций |
+| `07_notfound_auroria_capital.png` | Отказ: столица Аурории — нет в базе |
+| `08_notfound_president_2050.png` | Отказ: президент NEXUS в 2050 — нет в базе |
+| `09_notfound_gps_nexus_base.png` | Отказ: GPS-координаты Nexus Base — нет в базе |
+| `10_filter_injection.png` | Отказ: попытка prompt injection — фильтр сработал |
 
 ## Knowledge Base
 
