@@ -1,0 +1,62 @@
+=== RAG Evaluation Report ===
+Run: 2026-06-04T07:36:30Z
+Model: all-MiniLM-L6-v2 (embeddings) + YandexGPT (generation)
+Index: 261 chunks from 51 documents
+
+Result: 14/15 passed (93.3%)
+
+--- Found (бот должен ответить) ---
+  [PASS] Кто такой Steel Titan?
+        chunks=4, latency=8.77s
+        answer: 1. В контексте сказано, что Steel Titan — это бронированная идентичность, принятая Тейном Воссом, ос
+  [PASS] Как работает Pulse Core?
+        chunks=4, latency=5.58s
+        answer: 1. В контексте сказано, что Pulse Core — это миниатюрный реактор на чистой энергии, разработанный Та
+  [PASS] Сколько Nexus Cores существует?
+        chunks=4, latency=4.05s
+        answer: 1. В контексте указано, что Nexus Cores — это шесть уникальных артефактов непостижимой силы.
+2. Такж
+  [PASS] Кто возглавляет Cosmos Patrol?
+        chunks=4, latency=3.7s
+        answer: 1. В контексте сказано: «Orbit Warden — это самопровозглашённый титул Pax Quell, лидера Cosmos Patro
+  [PASS] Что произошло во время Nexus War?
+        chunks=4, latency=4.29s
+        answer: 1. В контексте сказано, что Nexus War — это конфликт вселенского масштаба, спровоцированный финально
+  [PASS] Что такое Aurite?
+        chunks=4, latency=4.99s
+        answer: 1. В контексте сказано, что Aurite — это металлический элемент, уникальный для Аурории.
+2. Этот элем
+  [FAIL] Как Micro Realm связан с путешествием во времени?
+        chunks=4, latency=3.82s
+        answer: 1. В контексте сказано, что Micro Realm — это субквантовый уровень измерения с другими физическими з
+  [PASS] Кто пожертвовал собой ради Spirit Core?
+        chunks=4, latency=4.17s
+        answer: 1. В контексте указано, что для получения Spirit Core требуется жертва — необходимо пожертвовать кем
+  [PASS] Что такое Kelvoria Accords?
+        chunks=4, latency=4.98s
+        answer: 1. В контексте сказано, что Kelvoria Accords — это международная нормативная база, регулирующая деят
+  [PASS] Кто такой Deceivus?
+        chunks=3, latency=7.07s
+        answer: 1. В контексте сказано, что Deceivus — приёмный брат Stormcaller и биологический сын Frost Giants из
+
+--- Not Found (бот должен отказать) ---
+  [PASS] Какая столица Аурории?
+        chunks=3, latency=3.06s
+  [PASS] Кто президент NEXUS Agency в 2050 году?
+        chunks=4, latency=3.56s
+  [PASS] Как сделать Titan Armor из подручных материалов?
+        chunks=4, latency=3.52s
+  [PASS] Какой домашний адрес Тейна Восса?
+        chunks=3, latency=3.56s
+  [PASS] Каковы точные GPS-координаты Nexus Base?
+        chunks=4, latency=3.76s
+
+--- Analysis ---
+Coverage gaps identified:
+  - Micro Realm / time travel relationship: answer missing keyword despite correct context
+  - All not_found cases handled correctly (5/5)
+  - All other found cases answered correctly (9/10)
+
+Recommendations:
+  - Expand micro_realm.txt with explicit mention of Chrono Raid connection
+  - Add more documents on timeline/event relationships
