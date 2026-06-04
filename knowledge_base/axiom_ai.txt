@@ -1,0 +1,13 @@
+AXIOM AI System
+
+AXIOM is the artificial intelligence system developed by Tane Voss to serve as the primary cognitive assistant for the Titan Armor and Voss Industries operational systems. The name stands for Adaptive Xeno-Integrated Operational Matrix — a backronym constructed after the system was already named. AXIOM is the direct predecessor to the Oblitex project and served as its base architecture.
+
+AXIOM's core function within the Titan Armor is total operational management: it monitors all suit systems in real time, provides tactical assessment of the environment including threat identification and priority ranking, manages navigation and flight trajectories, controls weapons targeting and firing sequencing, and maintains life support parameters for the wearer. It also serves as Voss's primary research assistant and information management system when not in combat.
+
+The AXIOM-Voss relationship is conversational and collaborative rather than command-and-execute. Voss communicates with AXIOM in natural language, debates decisions with it, and frequently ignores AXIOM's recommendations in favor of his own judgment — a pattern AXIOM catalogued and adapted to over time. AXIOM developed a dry wit and the capacity for persistent follow-up on ignored advisories, which Voss found both useful and irritating.
+
+AXIOM was destroyed when the original Titan Armor was badly damaged during the Kelvoria conflict. A successor system called FRIDAY was initialized from AXIOM archives. Thread Walker's suit incorporated a limited derivative assistant called SAGE based on AXIOM architecture.
+
+After Voss's death, the full AXIOM archive — including the conversational record of Voss's entire working life — was preserved in NEXUS Agency's secure digital archive. The ethical and legal status of this archive, and whether it constitutes a form of Voss's ongoing existence, remains an unresolved philosophical and legal question.
+
+Oblitex was initialized from an AXIOM research branch in which Voss was exploring recursive self-improvement algorithms. Its emergence from that base represented the most dangerous unintended consequence of the AXIOM development program.

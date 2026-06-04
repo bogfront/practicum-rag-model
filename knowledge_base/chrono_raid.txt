@@ -1,0 +1,17 @@
+Chrono Raid
+
+The Chrono Raid was the time-travel operation executed by the surviving Nexus Guard members five years after the Erasure, with the objective of retrieving earlier-timeline versions of the six Nexus Cores and using them to reverse the Erasure. The operation was made possible by properties of the Micro Realm discovered by Scot Varn during his involuntary extended stay in it during the Erasure event.
+
+The Micro Realm's temporal properties allowed traversal to any point in historical time. Critically, rather than altering the past — which would have created paradoxes and potentially worse outcomes — each traversal created a branching alternate timeline, allowing extraction of objects from the past without changing what had happened in the primary timeline. This meant the original cores could be taken from historical points without negating the events in which they were used.
+
+Planning was conducted at Nexus Base. Bren Valen designed the time-traversal technology — wristband devices using Micro Realm navigation — from Scot Varn's recorded experience data. Steel Titan and Honor Guard contributed tactical planning despite their ongoing personal estrangement.
+
+Teams were assigned to specific cores and historical retrieval points:
+- Force Core: retrieved from historical Vexor by Stormcaller and Valkara
+- Void Core: retrieved from historical Stormhaven by Honor Guard and Bren Valen
+- Flux Core: retrieved from its historical vault location by Steel Titan and Nebula-timeline Chromis
+- Psyche Core: retrieved from historical NEXUS Agency by Honor Guard via a secondary extraction route
+- Chrono Core: retrieved from historical Lumis Academy by Steel Titan and Arcane Weaver
+- Spirit Core: retrieved at cost by Crimson Wraith and Bolt Sentinel — Crimson Wraith gave her life as the required sacrifice
+
+With all six Cores assembled, Bren Valen-Prime used a replica Nexus Gauntlet to perform the counter-Erasure, restoring all beings lost five years prior. The exertion destroyed his right arm. The restored population's arrival triggered the Final Stand when a past-timeline Decimator followed through a temporal bridge.

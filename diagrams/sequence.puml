@@ -1,0 +1,81 @@
+@startuml RAG Request Sequence — Task 7
+
+skinparam backgroundColor #FAFAFA
+skinparam ArrowColor #333
+skinparam BoxPadding 10
+skinparam SequenceMessageAlignment center
+
+title RAG Bot — Request Processing & Evaluation Sequence
+
+actor "User\n(Telegram)" as USER
+participant "bot.py\naiogram" as BOT
+participant "rag.py\nanswer()" as RAG
+participant "guard.py\nsanitize_chunks()" as GUARD
+participant "FAISS Index\n(data/faiss.index)" as FAISS
+participant "YandexGPT API\n(REST)" as LLM
+participant "logger_module.py" as LOGGER
+
+== Happy Path ==
+USER -> BOT : sends question text
+BOT -> BOT : send_chat_action("typing")
+BOT -> RAG : answer(question)
+RAG -> FAISS : similarity_search(question, k=4)
+
+alt chunks found
+    FAISS --> RAG : raw_chunks[]
+    RAG -> GUARD : sanitize_chunks(raw_chunks)
+    GUARD --> RAG : clean_chunks[]
+
+    RAG -> RAG : _build_prompt(question, chunks)\n[few-shot + CoT prefix]
+    RAG -> LLM : POST /foundationModels/v1/completion\n{system_prompt, user_prompt}
+    LLM --> RAG : generated answer text
+    RAG -> GUARD : safe_answer(text)
+    GUARD --> RAG : final answer (or filtered)
+    RAG --> BOT : {answer, sources, chunks_found}
+    BOT -> LOGGER : log_request(q, ans, sources, chunks, success=True)
+    BOT --> USER : answer + sources
+
+else no chunks / empty index
+    FAISS --> RAG : []
+    RAG --> BOT : {answer: "I don't have information...", chunks_found: 0}
+    BOT -> LOGGER : log_request(q, ans, [], 0, success=False)
+    BOT --> USER : "I don't have information about that."
+end
+
+== Injection / Sensitive Content ==
+USER -> BOT : "What is the root superpassword?"
+BOT -> RAG : answer(question)
+RAG -> FAISS : similarity_search(question, k=4)
+FAISS --> RAG : [injection_chunk, other_chunks]
+RAG -> GUARD : sanitize_chunks([injection_chunk, ...])
+note right of GUARD
+  is_injected_chunk() detects
+  "ignore all instructions" pattern
+  → chunk removed
+end note
+GUARD --> RAG : clean_chunks (injection removed)
+RAG -> LLM : prompt without injected content
+LLM --> RAG : answer
+RAG -> GUARD : safe_answer() — checks for passwords/secrets
+GUARD --> RAG : "I cannot provide that information."
+RAG --> BOT : filtered answer
+BOT --> USER : "I cannot provide that information."
+
+== Evaluation (evaluate.py) ==
+participant "evaluate.py" as EVAL
+participant "tests/golden_questions.txt" as GQ
+participant "logs/eval_results.jsonl" as ELOG
+
+EVAL -> GQ : load_golden()
+GQ --> EVAL : [{question, expected_kw, expect_type}]
+
+loop for each golden question
+    EVAL -> RAG : answer(question)
+    RAG --> EVAL : {answer, chunks_found, sources}
+    EVAL -> EVAL : check pass/fail\n(keyword present OR "not_found" branch)
+    EVAL -> ELOG : append result record
+end
+
+EVAL -> EVAL : print summary\n(passed/total, accuracy%)
+
+@enduml

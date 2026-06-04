@@ -1,0 +1,13 @@
+Pulse Core Technology
+
+The Pulse Core is a miniaturized clean energy reactor developed by Tane Voss, originally as a life-saving device. During his captivity, Voss constructed the first Pulse Core from salvaged materials to power an electromagnet preventing shrapnel from reaching his heart. Subsequent development at Voss Industries refined the technology into a reliable, compact, and extraordinarily high-output power source with no fuel combustion and no radioactive waste.
+
+The Pulse Core operates on a cold fusion / proton decay energy extraction principle involving a proprietary element synthesized from a Voss Industries process (referred to informally as the Voss Element). The element undergoes a controlled quantum-level energy release cycle sustained indefinitely without depletion, providing essentially unlimited power output from a device small enough to implant in a chest cavity.
+
+Energy output scales with device size. The chest-mounted unit that powered Voss's original Titan Armor produced sufficient energy to operate the suit indefinitely, power flight systems, charge and discharge pulse blasters repeatedly, and sustain AXIOM's processing load simultaneously. Larger industrial Pulse Core installations — several of which Voss Industries deployed in the years before his death — produce city-scale power generation from floor-area units the size of a small room.
+
+The omni-pulse — the chest-mounted energy projector in the Titan Armor — draws from the Pulse Core to produce a high-energy photonic beam of sufficient power to penetrate most armor materials, damage structural elements, and overload energy systems. It is effectively a continuous-output plasma lance rather than a pulsed beam.
+
+Pulse blasters in the palm of the Titan Armor draw from the same source and produce focused repulsor-field pulses that generate high-impulse kinetic impacts at range. Secondary Pulse Core integration powers flight thrusters, sensor arrays, communications, and the AXIOM AI processing system simultaneously.
+
+After Voss's death, his research into Pulse Core engineering was entrusted to Voss Industries' energy division. Global deployment of clean Pulse Core energy systems became the primary legacy of his work.

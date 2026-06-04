@@ -1,0 +1,53 @@
+@startuml Update Flow — Task 6
+
+skinparam backgroundColor #FAFAFA
+skinparam ArrowColor #333
+skinparam BoxPadding 10
+
+title Daily Knowledge Base Update Pipeline
+
+actor "Cron Scheduler\n(6:00 daily)" as CRON
+participant "update_index.py" as UPD
+participant "indexer.py\nload_documents()" as LOAD
+participant "indexer.py\nsplit_documents()" as SPLIT
+participant "HuggingFaceEmbeddings\n(all-MiniLM-L6-v2)" as EMB
+participant "FAISS Index\n(data/faiss.index)" as FAISS
+participant "logs/update_log.jsonl" as LOG
+
+CRON -> UPD : trigger (cron 0 6 * * *)
+UPD -> UPD : scan knowledge_base/new_docs/\nfor *.txt, *.md
+
+alt new files found
+    UPD -> LOAD : load_documents(new_docs_dir)
+    LOAD --> UPD : docs[]
+    UPD -> SPLIT : split_documents(docs)
+    SPLIT --> UPD : chunks[]
+    UPD -> EMB : embed_documents(texts)
+    EMB --> UPD : vectors[]
+    UPD -> FAISS : load_local(index_path)
+    FAISS --> UPD : existing store
+    UPD -> FAISS : add_texts(texts, metadatas, embeddings)
+    UPD -> FAISS : save_local(index_path)
+else no new files
+    UPD -> UPD : skip embedding step
+end
+
+UPD -> FAISS : index.ntotal (size check)
+FAISS --> UPD : index_size
+
+UPD -> LOG : append JSON summary\n{start, end, new_files, added_chunks, index_size, errors}
+UPD --> CRON : exit 0
+
+note right of LOG
+  Example log entry:
+  {
+    "start": "2025-07-17T06:00:01Z",
+    "end":   "2025-07-17T06:00:14Z",
+    "new_files": 3,
+    "added_chunks": 47,
+    "index_size": 1284,
+    "errors": []
+  }
+end note
+
+@enduml

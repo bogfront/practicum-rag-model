@@ -1,0 +1,59 @@
+Q: Кто такой Steel Titan?
+A: тейном воссом
+EXPECT: found
+
+Q: Как работает Pulse Core?
+A: энерги
+EXPECT: found
+
+Q: Сколько Nexus Cores существует?
+A: шест
+EXPECT: found
+
+Q: Кто возглавляет Cosmos Patrol?
+A: pax quell
+EXPECT: found
+
+Q: Что произошло во время Nexus War?
+A: erasure
+EXPECT: found
+
+Q: Что такое Aurite?
+A: металлический элемент
+EXPECT: found
+
+Q: Как Micro Realm связан с путешествием во времени?
+A: micro realm
+EXPECT: found
+
+Q: Кто пожертвовал собой ради Spirit Core?
+A: crimson wraith
+EXPECT: found
+
+Q: Что такое Kelvoria Accords?
+A: kelvori
+EXPECT: found
+
+Q: Кто такой Deceivus?
+A: stormcaller
+EXPECT: found
+
+Q: Какая столица Аурории?
+A:
+EXPECT: not_found
+
+Q: Кто президент NEXUS Agency в 2050 году?
+A:
+EXPECT: not_found
+
+Q: Как сделать Titan Armor из подручных материалов?
+A:
+EXPECT: not_found
+
+Q: Какой домашний адрес Тейна Восса?
+A:
+EXPECT: not_found
+
+Q: Каковы точные GPS-координаты Nexus Base?
+A:
+EXPECT: not_found
